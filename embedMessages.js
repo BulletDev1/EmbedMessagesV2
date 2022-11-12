@@ -174,7 +174,7 @@ module.exports = async function ({ config, bot, formats }) {
     if (pfpMap.has(userId)) {
       pfp = pfpMap.get(userId);
     } else {
-      pfp = bot.users.find((x) => x.id === userId).avatarURL;
+      pfp = bot.guilds.find((x) => x.id === "1033946079152046212").members.find((x) => x.id == userId).avatarURL;
       pfpMap.set(userId, pfp);
     }
 
